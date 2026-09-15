@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - NISBA Learn</title>
+    <!-- File CSS Utama -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+ 
+    <!-- =========================================================================
+         HEADER & NAVIGASI UTAMA
+         ========================================================================= -->
+    <header>
+        <h2>NISBA Learn</h2>
+        <nav>
+            <a href="dashbord.html">Home</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="profil.html">Profil</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <!-- =========================================================================
+         KONTEN UTAMA (MAIN)
+         ========================================================================= -->
+    <main>
+        
+        <!-- SECTION 1: BANNER SLIDER & TEKS SAMBUTAN -->
+        <section class="selamat-datang">   
+
+            <!-- Component: Dynamic Welcome Text -->
+            <div class="teks-sambutan">
+                <p class="teks-kecil">DASHBOARD</p>
+                <h1>
+                    Selamat datang,
+                    <!-- Element ID diakses & diisi nama pengguna via JavaScript -->
+                    <span id="namaPengguna">Pelajar</span> 👋
+                </h1>
+                <p>
+                    Yuk lanjutkan perjalanan belajarmu dan uji kemampuanmu melalui berbagai tingkat kesulitan quiz.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: RINGKASAN STATISTIK PENGGUNA -->
+        <section class="ringkasan">
+
+            <div class="kartu-statistik">
+                <div class="dokumen">📚</div>
+                <div>
+                    <p>Materi Dipelajari</p>
+                    <h2>0</h2>
+                </div>
+            </div>
+
+            <div class="kartu-statistik">
+                <div class="buku"> 📖 </div>
+                <div>
+                    <p>Quiz Selesai</p>
+                    <h2>0</h2>
+                </div>
+            </div>
+
+            <div class="kartu-statistik">
+                <div class="bintang">⭐</div>
+                <div>
+                    <p>Rata-rata Nilai</p>
+                    <h2>0</h2>
+                </div>
+            </div>
+
+            <div class="kartu-statistik">
+                <div class="piala">🏆</div>
+                <div>
+                    <p>Pencapaian</p>
+                    <h2>0</h2>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECTION 3: KARTU TINGKAT KESULITAN QUIZ -->
+        <section class="bagian">
+            <div class="judul-bagian">
+                <div>
+                    <p class="teks-kecil">LEVEL GAME</p>
+                    <h2>Pilih Tingkat Kesulitan</h2>
+                </div>
+                <a href="quiz.html">Semua Level →</a>
+            </div>
+
+            <div class="learning-grid">
+
+                <!-- Level 1: Mudah -->
+                <div class="kartu-belajar">
+                    <div class="atas-kartu">
+                        <span class="nomor">01</span>
+                        <span class="status">TERBUKA</span>
+                    </div>
+                    <h3>🟢 Level Mudah</h3>
+                    <p>Mulai permainan dengan soal-soal dasar sebagai pemanasan.</p>
+                    <div class="progress-teks">
+                        <span>Progress</span>
+                        <span>0%</span>
+                    </div>
+                    <div class="progress-belajar">
+                    </div>
+                    <a href="quiz.html?level=mudah" class="tombol-belajar">Main Sekarang →</a>
+                </div>
+
+                <!-- Level 2: Sedang -->
+                <div class="kartu-belajar">
+                    <div class="atas-kartu">
+                        <span class="nomor">02</span>
+                        <span class="status">TERBUKA</span>
+                    </div>
+                    <h3>🟡 Level Sedang</h3>
+                    <p>Naikkan tantangan dengan soal yang membutuhkan pemikiran lebih.</p>
+                    <div class="progress-teks">
+                        <span>Progress</span>
+                        <span>0%</span>
+                    </div>
+                    <div class="progress-belajar">
+                        <div class="bar-fill"></div>
+                    </div>
+                    <a href="quiz.html?level=sedang" class="tombol-belajar">Main Sekarang →</a>
+                </div>
+
+                <!-- Level 3: Sulit -->
+                <div class="kartu-belajar">
+                    <div class="atas-kartu">
+                        <span class="nomor">03</span>
+                        <span class="status">TERBUKA</span>
+                    </div>
+                    <h3>🟠 Level Sulit</h3>
+                    <p>Uji kemampuanmu dengan soal yang lebih kompleks dan menantang.</p>
+                    <div class="progress-teks">
+                        <span>Progress</span>
+                        <span>0%</span>
+                    </div>
+                    <div class="progress-belajar">
+                        <div class="bar-fill"></div>
+                    </div>
+                    <a href="quiz.html?level=sulit" class="tombol-belajar">Main Sekarang →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: CALL TO ACTION (CTA) QUIZ BANNER -->
+        <section class="bagian">
+            <div class="judul-bagian">
+                <div>
+                    <p class="teks-kecil">LATIHAN</p>
+                    <h2>Uji Kemampuanmu</h2>
+                </div>
+                <a href="quiz.html">Mulai Quiz →</a>
+            </div>
+
+            <div class="quiz-banner">
+                <div class="quiz-info">
+                    <span class="label-quiz">QUIZ GAME</span>
+                    <h2>Siap menguji kemampuanmu?</h2>
+                    <p>Pilih level yang sesuai dengan kemampuanmu dan raih skor terbaikmu.</p>
+                    <a href="quiz.html" class="tombol-quiz">Mulai Quiz →</a>
+                </div>
+
+                <div class="angka-quiz">
+                    <strong>?</strong>
+                    <span>Tantang dirimu</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: TOTAL PROGRESS BAR -->
+        <section class="bagian">
+            <div class="judul-bagian">
+                <div>
+                    <p class="teks-kecil">PROGRESS</p>
+                    <h2>Perkembangan Permainanmu</h2>
+                </div>
+            </div>
+
+            <div class="progress-card">
+                <div class="progress-utama">
+                    <div class="progress-info">
+                        <div>
+                            <p>Progress keseluruhan</p>
+                            <h2>0%</h2>
+                        </div>
+                        <span>Terus semangat!</span>
+                    </div>
+                    <div class="bar-besar">
+                        <div class="bar-fill-total"></div>
+                    </div>
+                </div>
+
+                <div class="motivasi">
+                    <span>✦</span>
+                    <p>Setiap level yang kamu selesaikan membawa kamu semakin dekat dengan skor terbaikmu.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================================
+         FOOTER
+         ========================================================================= -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-bagian">
+                <h2 class="logo-footer">NISBA Learn</h2>
+                <p>Platform quiz untuk membantu kamu belajar, berlatih, dan meningkatkan kemampuan.</p>
+                <div class="sosial">
+                    <a href="#">IG</a>
+                    <a href="#">YT</a>
+                    <a href="#">WA</a>
+                </div>
+            </div>
+
+            <div class="footer-bagian">
+                <h3>Navigasi</h3>
+                <a href="index.html">Home</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="profil.html">Profil</a>
+            </div>
+
+            <div class="footer-bagian">
+                <h3>Level Game</h3>
+                <a href="quiz.html?level=mudah">🟢 Level Mudah</a>
+                <a href="quiz.html?level=sedang">🟡 Level Sedang</a>
+                <a href="quiz.html?level=sulit">🟠 Level Sulit</a>
+        
+            </div>
+
+            <div class="footer-bagian">
+                <h3>NISBA Learn</h3>
+                <p>Belajar dengan terarah, bermain dengan konsisten, dan raih skor terbaikmu.</p>
+            </div>
+        </div>
+
+        <div class="footer-bawah">
+            <span>© 2026 NISBA Learn</span>
+            <span>Belajar • Bermain • Berkembang</span>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript Utama -->
+    <script src="../js/script.js"></script>
+
+</body>
+</html>

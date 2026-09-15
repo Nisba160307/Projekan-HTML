@@ -1,0 +1,757 @@
+/* =========================================
+   1. RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #172033;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(124, 92, 252, 0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(96, 165, 250, 0.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #F4F7FF,
+            #EEF2FF 55%,
+            #F7F3FF
+        );
+}
+
+
+/* =========================================
+   2. HEADER
+========================================= */
+
+header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-bottom: 1px solid #E2E8F0;
+
+    box-shadow:
+        0 4px 20px
+        rgba(71, 85, 105, 0.06);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* =========================================
+   3. LOGO
+========================================= */
+
+header h2 {
+    font-size: 25px;
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   4. NAVIGASI
+========================================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    position: relative;
+
+    color: #475569;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #5B6CFF;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   5. MAIN
+========================================= */
+
+main {
+    min-height: 78vh;
+
+    padding: 65px 20px;
+}
+
+.profil-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   6. JUDUL PROFIL
+========================================= */
+
+.judul-profil {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.teks-kecil {
+    margin-bottom: 10px;
+
+    color: #7C5CFC;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.judul-profil h1 {
+    margin-bottom: 12px;
+
+    font-size: 36px;
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC,
+            #60A5FA
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.judul-profil p:last-child {
+    color: #64748B;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   7. KARTU PROFIL
+========================================= */
+
+.profil-card {
+    width: 100%;
+
+    padding: 42px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(248, 250, 255, 0.96)
+        );
+
+    border: 1px solid #E0E7FF;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(91, 108, 255, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.profil-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 22px 50px
+        rgba(91, 108, 255, 0.14);
+}
+
+
+/* =========================================
+   8. FOTO / IKON PROFIL
+========================================= */
+
+.foto-profil {
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    border: 5px solid #EEF2FF;
+
+    box-shadow:
+        0 10px 25px
+        rgba(91, 108, 255, 0.20);
+}
+
+.foto-profil .material-symbols-outlined {
+    color: white;
+
+    font-size: 50px;
+}
+
+
+/* =========================================
+   9. NAMA USER
+========================================= */
+
+.profil-card > h2 {
+    margin-bottom: 6px;
+
+    color: #172033;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.username {
+    color: #64748B;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   10. GARIS
+========================================= */
+
+.garis {
+    width: 100%;
+    height: 1px;
+
+    margin: 32px 0;
+
+    background: #E2E8F0;
+}
+
+
+/* =========================================
+   11. INFORMASI AKUN
+========================================= */
+
+.informasi-akun {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+
+    text-align: left;
+}
+
+.info-item {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 18px;
+
+    background: #FAFBFF;
+
+    border: 1px solid #E0E7FF;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-3px);
+
+    background: #F5F6FF;
+
+    border-color: #A5B4FC;
+
+    box-shadow:
+        0 8px 20px
+        rgba(91, 108, 255, 0.08);
+}
+
+.info-item > .material-symbols-outlined {
+    flex-shrink: 0;
+
+    color: #5B6CFF;
+
+    font-size: 27px;
+}
+
+.info-item div {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.info-item div span {
+    color: #94A3B8;
+
+    font-size: 12px;
+}
+
+.info-item strong {
+    color: #172033;
+
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   12. STATISTIK
+========================================= */
+
+.statistik {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+
+    margin-top: 18px;
+}
+
+.statistik-item {
+    padding: 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F3F1FF,
+            #EEF2FF
+        );
+
+    border: 1px solid #DDE2FF;
+
+    border-radius: 18px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.statistik-item:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(91, 108, 255, 0.10);
+}
+
+.statistik-item .material-symbols-outlined {
+    margin-bottom: 8px;
+
+    color: #7C5CFC;
+
+    font-size: 30px;
+}
+
+.statistik-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #5B6CFF;
+
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.statistik-item span:last-child {
+    color: #64748B;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   13. FOOTER
+========================================= */
+
+footer {
+    margin-top: 30px;
+
+    background:
+        rgba(238, 242, 255, 0.88);
+
+    border-top: 1px solid #E2E8F0;
+}
+
+.footer-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 45px 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1.5fr;
+
+    gap: 50px;
+}
+
+.footer-bagian {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.logo-footer {
+    margin-bottom: 5px;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-bagian h3 {
+    margin-bottom: 5px;
+
+    color: #172033;
+
+    font-size: 16px;
+}
+
+.footer-bagian p {
+    color: #64748B;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.footer-bagian a {
+    color: #64748B;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.footer-bagian a:hover {
+    color: #5B6CFF;
+}
+
+
+/* =========================================
+   14. FOOTER BAWAH
+========================================= */
+
+.footer-bawah {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #64748B;
+
+    font-size: 12px;
+
+    border-top: 1px solid #E2E8F0;
+}
+
+
+/* =========================================
+   15. FOCUS
+========================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline:
+        3px solid
+        rgba(91, 108, 255, 0.25);
+
+    outline-offset: 3px;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   16. SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #EEF2FF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #A5B4FC;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7C5CFC;
+}
+
+
+/* =========================================
+   17. RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 750px) {
+
+    header {
+        padding: 17px 5%;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    main {
+        padding: 50px 18px;
+    }
+
+    .judul-profil h1 {
+        font-size: 30px;
+    }
+
+    .profil-card {
+        padding: 30px 25px;
+    }
+
+    .informasi-akun {
+        grid-template-columns: 1fr;
+    }
+
+    .statistik {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .footer-bawah {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================
+   18. RESPONSIVE HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    main {
+        padding: 40px 15px;
+    }
+
+    .judul-profil {
+        margin-bottom: 30px;
+    }
+
+    .judul-profil h1 {
+        font-size: 27px;
+    }
+
+    .judul-profil p:last-child {
+        font-size: 14px;
+    }
+
+    .profil-card {
+        padding: 28px 18px;
+
+        border-radius: 20px;
+    }
+
+    .foto-profil {
+        width: 85px;
+        height: 85px;
+    }
+
+    .foto-profil .material-symbols-outlined {
+        font-size: 43px;
+    }
+
+    .profil-card > h2 {
+        font-size: 22px;
+    }
+
+    .informasi-akun {
+        gap: 12px;
+    }
+
+    .info-item {
+        padding: 15px;
+    }
+
+    .statistik {
+        gap: 14px;
+    }
+
+    .statistik-item {
+        padding: 22px;
+    }
+
+    .statistik-item strong {
+        font-size: 27px;
+    }
+
+    .footer-container {
+        padding: 35px 20px;
+    }
+
+    .footer-bawah {
+        padding: 18px 20px;
+    }
+}

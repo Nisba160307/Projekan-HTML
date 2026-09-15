@@ -1,0 +1,716 @@
+/* =========================================
+   1. RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================
+   2. BODY
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #172033;
+
+    min-height: 100vh;
+
+    background-image:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(124, 92, 252, 0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(142, 197, 252, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #F4F7FF,
+            #EEF2FF 55%,
+            #F7F3FF
+        );
+}
+
+
+/* =========================================
+   4. HEADER
+========================================= */
+
+header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 50;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border-bottom:
+        1px solid #E2E8F0;
+
+    box-shadow:
+        0 4px 20px
+        rgba(71, 85, 105, 0.06);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================================
+   5. LOGO HEADER
+========================================= */
+
+header h2 {
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   6. NAVIGASI
+========================================= */
+
+nav {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+nav a {
+    position: relative;
+
+    color: #475569;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #5B6CFF;
+}
+
+
+/* Garis bawah saat hover */
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    transition: width 0.3s ease;
+}
+
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   7. AREA UTAMA
+========================================= */
+
+main {
+    padding: 70px 20px;
+
+    min-height: 700px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================
+   8. KOTAK REGISTRASI
+========================================= */
+
+.form-container {
+    width: 450px;
+
+    max-width: 95%;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border:
+        1px solid #D9E0EE;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(91, 108, 255, 0.12);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    transition: 0.3s ease;
+}
+
+
+.form-container:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 22px 50px
+        rgba(91, 108, 255, 0.16);
+}
+
+
+/* =========================================
+   9. JUDUL REGISTRASI
+========================================= */
+
+.form-container h1 {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC,
+            #60A5FA
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   10. LABEL
+========================================= */
+
+form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   11. INPUT
+========================================= */
+
+form input {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 18px;
+
+    border:
+        1px solid #CBD5E1;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background-color: #F8FAFF;
+
+    color: #172033;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+
+/* Placeholder */
+
+form input::placeholder {
+    color: #94A3B8;
+}
+
+
+/* Input saat diklik */
+
+form input:focus {
+    border-color: #7C5CFC;
+
+    background-color: #FFFFFF;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(124, 92, 252, 0.10);
+}
+
+
+/* =========================================
+   12. PASSWORD
+========================================= */
+
+.kotak-sandi {
+    position: relative;
+}
+
+
+/* Ruang untuk tombol mata */
+
+.kotak-sandi input {
+    padding-right: 45px;
+}
+
+
+/* Tombol mata */
+
+.kotak-sandi button {
+    position: absolute;
+
+    right: 8px;
+
+    top: 5px;
+
+    border: none;
+
+    background: none;
+
+    color: #7C5CFC;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.kotak-sandi button:hover {
+    color: #5B6CFF;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   13. TOMBOL DAFTAR
+========================================= */
+
+form button[type="submit"] {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(91, 108, 255, 0.22);
+
+    transition: 0.3s ease;
+}
+
+
+/* Saat tombol disentuh mouse */
+
+form button[type="submit"]:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(91, 108, 255, 0.30);
+}
+
+
+/* Saat tombol ditekan */
+
+form button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   14. PESAN
+========================================= */
+
+#pesan {
+    margin-top: 18px;
+
+    text-align: center;
+
+    color: #5B6CFF;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   15. FOOTER
+========================================= */
+
+footer {
+    padding: 40px 8% 20px;
+
+    background-color: #EEF2FF;
+
+    border-top:
+        1px solid #E2E8F0;
+}
+
+
+/* =========================================
+   16. FOOTER CONTAINER
+========================================= */
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap: 40px;
+}
+
+
+/* =========================================
+   17. JUDUL FOOTER
+========================================= */
+
+.footer-bagian h3 {
+    margin-bottom: 15px;
+
+    color: #7C5CFC;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   18. TEKS FOOTER
+========================================= */
+
+.footer-bagian p {
+    margin-bottom: 10px;
+
+    color: #64748B;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   19. LINK FOOTER
+========================================= */
+
+.footer-bagian a {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #64748B;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.footer-bagian a:hover {
+    color: #5B6CFF;
+}
+
+
+/* =========================================
+   20. LOGO FOOTER
+========================================= */
+
+.logo-footer {
+    margin-bottom: 12px;
+
+    font-size: 23px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   21. SOSIAL MEDIA
+========================================= */
+
+.sosial {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+.sosial a {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 35px;
+
+    height: 35px;
+
+    margin: 0;
+
+    border:
+        1px solid #A5B4FC;
+
+    border-radius: 50%;
+
+    color: #5B6CFF;
+
+    transition: 0.3s;
+}
+
+
+.sosial a:hover {
+    color: #7C5CFC;
+
+    border-color: #7C5CFC;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   22. BAGIAN BAWAH FOOTER
+========================================= */
+
+.footer-bawah {
+    display: flex;
+
+    justify-content: space-between;
+
+    max-width: 1200px;
+
+    margin: 30px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid #E2E8F0;
+
+    color: #64748B;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   23. FOCUS KEYBOARD
+========================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline:
+        3px solid
+        rgba(91, 108, 255, 0.25);
+
+    outline-offset: 3px;
+
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   24. SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #EEF2FF;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #A5B4FC;
+
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7C5CFC;
+}
+
+
+/* =========================================
+   25. RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-bawah {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+
+/* =========================================
+   26. MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+
+    header h2 {
+        font-size: 20px;
+    }
+
+
+    nav {
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+
+    main {
+        padding: 40px 15px;
+    }
+
+
+    .form-container {
+        padding: 28px 22px;
+    }
+
+
+    .form-container h1 {
+        font-size: 27px;
+    }
+}

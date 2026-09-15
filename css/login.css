@@ -1,0 +1,900 @@
+/* ========================================
+   1. RESET
+======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ========================================
+   2. BODY
+======================================== */
+
+body {
+    font-family: Arial, sans-serif;
+
+    color: #172033;
+
+    min-height: 100vh;
+
+    background-image:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(124, 92, 252, 0.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(142, 197, 252, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #F4F7FF,
+            #EEF2FF 55%,
+            #F7F3FF
+        );
+}
+
+
+/* ========================================
+   3. HEADER
+======================================== */
+
+header {
+    width: 100%;
+
+    padding: 18px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+        rgba(255, 255, 255, 0.88);
+
+    border-bottom:
+        1px solid #E2E8F0;
+
+    box-shadow:
+        0 4px 20px
+        rgba(71, 85, 105, 0.06);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 50;
+}
+
+
+/* ========================================
+   4. LOGO
+======================================== */
+
+header h2 {
+    font-size: 24px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ========================================
+   5. NAVIGASI
+======================================== */
+
+header nav {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+header nav a {
+    position: relative;
+
+    text-decoration: none;
+
+    color: #475569;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+
+header nav a:hover {
+    color: #5B6CFF;
+}
+
+
+/* Garis bawah navigasi */
+
+header nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    transition: width 0.3s ease;
+}
+
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   6. MAIN
+======================================== */
+
+main {
+    min-height: 650px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 70px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ========================================
+   7. HIASAN BACKGROUND
+======================================== */
+
+main::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(124, 92, 252, 0.08);
+
+    filter: blur(80px);
+
+    top: 50px;
+
+    left: 10%;
+}
+
+
+main::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+
+    height: 280px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(142, 197, 252, 0.10);
+
+    filter: blur(80px);
+
+    bottom: 20px;
+
+    right: 10%;
+}
+
+
+/* ========================================
+   8. LOGIN CONTAINER
+======================================== */
+
+.login-container {
+    width: 100%;
+
+    max-width: 440px;
+
+    padding: 42px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border:
+        1px solid #D9E0EE;
+
+    box-shadow:
+        0 18px 45px
+        rgba(91, 108, 255, 0.12);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    position: relative;
+
+    z-index: 2;
+
+    transition: 0.3s ease;
+}
+
+
+.login-container:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 22px 50px
+        rgba(91, 108, 255, 0.16);
+}
+
+
+/* ========================================
+   9. ICON LOGIN
+======================================== */
+
+.login-icon {
+    width: 72px;
+
+    height: 72px;
+
+    margin:
+        0 auto 22px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(91, 108, 255, 0.13),
+            rgba(124, 92, 252, 0.10)
+        );
+
+    border:
+        1px solid #C7D2FE;
+
+    color: #5B6CFF;
+
+    box-shadow:
+        0 10px 25px
+        rgba(91, 108, 255, 0.10);
+}
+
+
+.login-icon span {
+    font-size: 36px;
+}
+
+
+/* ========================================
+   10. JUDUL
+======================================== */
+
+.login-container h1 {
+    text-align: center;
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC,
+            #60A5FA
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ========================================
+   11. SUBJUDUL
+======================================== */
+
+.subjudul {
+    text-align: center;
+
+    color: #64748B;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+
+/* ========================================
+   12. FORM
+======================================== */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+form label {
+    margin-top: 16px;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #475569;
+}
+
+
+form input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid #CBD5E1;
+
+    outline: none;
+
+    background:
+        #F8FAFF;
+
+    color: #172033;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+form input::placeholder {
+    color: #94A3B8;
+}
+
+
+form input:focus {
+    border-color: #7C5CFC;
+
+    background:
+        #FFFFFF;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(124, 92, 252, 0.10);
+}
+
+
+/* ========================================
+   13. PASSWORD
+======================================== */
+
+.kotak-sandi {
+    position: relative;
+
+    width: 100%;
+}
+
+
+.kotak-sandi input {
+    padding-right: 55px;
+}
+
+
+.kotak-sandi button {
+    position: absolute;
+
+    right: 7px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #7C5CFC;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.kotak-sandi button:hover {
+    color: #5B6CFF;
+
+    transform:
+        translateY(-50%) scale(1.05);
+}
+
+
+.kotak-sandi button span {
+    font-size: 21px;
+}
+
+
+/* ========================================
+   14. PESAN LOGIN
+======================================== */
+
+#pesanLogin {
+    min-height: 20px;
+
+    margin-top: 14px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #7C5CFC;
+}
+
+
+/* ========================================
+   15. TOMBOL LOGIN
+======================================== */
+
+.tombol-login {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(91, 108, 255, 0.22);
+
+    transition: 0.3s;
+}
+
+
+.tombol-login:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(91, 108, 255, 0.30);
+}
+
+
+.tombol-login:active {
+    transform:
+        translateY(0);
+}
+
+
+/* ========================================
+   16. LINK REGISTRASI
+======================================== */
+
+.belum-akun {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #64748B;
+
+    font-size: 14px;
+}
+
+
+.belum-akun a {
+    color: #7C5CFC;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.belum-akun a:hover {
+    color: #5B6CFF;
+}
+
+
+/* ========================================
+   17. FOOTER
+======================================== */
+
+footer {
+    padding:
+        40px 8% 20px;
+
+    background:
+        #EEF2FF;
+
+    border-top:
+        1px solid #E2E8F0;
+}
+
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap: 40px;
+}
+
+
+.footer-bagian {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+/* ========================================
+   18. LOGO FOOTER
+======================================== */
+
+.logo-footer {
+    margin-bottom: 5px;
+
+    font-size: 23px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5B6CFF,
+            #7C5CFC
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ========================================
+   19. FOOTER JUDUL
+======================================== */
+
+.footer-bagian h3 {
+    color: #7C5CFC;
+
+    margin-bottom: 5px;
+
+    font-size: 17px;
+}
+
+
+/* ========================================
+   20. FOOTER TEKS
+======================================== */
+
+.footer-bagian p {
+    color: #64748B;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   21. FOOTER LINK
+======================================== */
+
+.footer-bagian a {
+    color: #64748B;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.footer-bagian a:hover {
+    color: #5B6CFF;
+}
+
+
+/* ========================================
+   22. SOSIAL MEDIA
+======================================== */
+
+.sosial {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+
+.sosial a {
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        #F8FAFF;
+
+    border:
+        1px solid #A5B4FC;
+
+    color: #5B6CFF;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.sosial a:hover {
+    background:
+        #EEF2FF;
+
+    border-color:
+        #7C5CFC;
+
+    color:
+        #7C5CFC;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* ========================================
+   23. FOOTER BAWAH
+======================================== */
+
+.footer-bawah {
+    padding:
+        18px 0 0;
+
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid #E2E8F0;
+
+    color: #64748B;
+
+    font-size: 12px;
+}
+
+
+/* ========================================
+   24. FOCUS
+======================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline:
+        3px solid
+        rgba(91, 108, 255, 0.25);
+
+    outline-offset: 3px;
+
+    border-radius: 6px;
+}
+
+
+/* ========================================
+   25. SCROLLBAR
+======================================== */
+
+/* ::-webkit-scrollbar {
+    width: 9px;
+} */
+
+
+::-webkit-scrollbar-track {
+    background: #EEF2FF;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #A5B4FC;
+
+    border-radius: 20px;
+}
+
+
+/* ::-webkit-scrollbar-thumb:hover {
+    background: #7C5CFC;
+} */
+
+
+/* ========================================
+   26. RESPONSIVE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .footer-container {
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    header {
+        padding:
+            15px 5%;
+    }
+
+
+    header h2 {
+        font-size: 20px;
+    }
+
+
+    header nav {
+        gap: 12px;
+
+        flex-wrap: wrap;
+    }
+
+
+    header nav a {
+        font-size: 13px;
+    }
+
+
+    main {
+        padding:
+            50px 18px;
+    }
+
+
+    .login-container {
+        padding:
+            30px 22px;
+    }
+
+
+    .login-container h1 {
+        font-size: 26px;
+    }
+
+
+    .footer-container {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .footer-bawah {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}

@@ -1,0 +1,1069 @@
+/* ========================================
+RESET
+======================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+/* ========================================
+BODY
+======================================== */
+
+body {
+min-height: 100vh;
+
+
+font-family: Arial, sans-serif;
+
+color: #28263d;
+
+background:
+    radial-gradient(
+        circle at top left,
+        #e9ddff,
+        transparent 35%
+    ),
+    radial-gradient(
+        circle at bottom right,
+        #dceeff,
+        transparent 35%
+    ),
+    #f7f8ff;
+
+
+}
+
+/* ========================================
+HIDDEN
+======================================== */
+
+.hidden {
+display: none !important;
+}
+
+/* ========================================
+HEADER
+======================================== */
+
+header {
+width: 100%;
+
+
+padding: 20px 6%;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+background: rgba(255, 255, 255, 0.92);
+
+border-bottom: 1px solid #e7e3f3;
+
+position: sticky;
+
+top: 0;
+
+z-index: 100;
+
+
+}
+
+.logo {
+color: #6245c5;
+
+
+text-decoration: none;
+
+font-size: 23px;
+
+font-weight: 800;
+
+
+}
+
+header > a {
+color: #6245c5;
+
+
+text-decoration: none;
+
+font-size: 14px;
+
+font-weight: 700;
+
+transition: 0.2s ease;
+
+
+}
+
+header > a:hover {
+color: #3e2b92;
+
+
+transform: translateY(-1px);
+
+
+}
+
+/* ========================================
+MAIN
+======================================== */
+
+main {
+width: 100%;
+
+
+max-width: 1200px;
+
+min-height: calc(100vh - 75px);
+
+margin: auto;
+
+padding: 55px 25px;
+
+
+}
+
+/* ========================================
+HALAMAN
+======================================== */
+
+.halaman {
+width: 100%;
+}
+
+/* ========================================
+JUDUL
+======================================== */
+
+.judul {
+text-align: center;
+
+
+max-width: 700px;
+
+margin: 0 auto 45px;
+
+
+}
+
+/*
+ICON EXTENSION
+*/
+
+.judul > .material-symbols-outlined {
+width: 65px;
+
+
+height: 65px;
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+margin-bottom: 18px;
+
+border-radius: 20px;
+
+color: white;
+
+background:
+    linear-gradient(
+        135deg,
+        #7655dc,
+        #477ce8
+    );
+
+font-size: 32px;
+
+box-shadow:
+    0 12px 30px rgba(91, 60, 196, 0.2);
+
+
+}
+
+/*
+JUDUL UTAMA
+*/
+
+.judul h1 {
+margin-bottom: 12px;
+
+
+font-size: 40px;
+
+line-height: 1.2;
+
+
+}
+
+.judul p {
+color: #77758a;
+
+
+font-size: 15px;
+
+line-height: 1.6;
+
+
+}
+
+/* ========================================
+LEVEL
+======================================== */
+
+.level-container {
+display: grid;
+
+
+grid-template-columns:
+    repeat(3, 1fr);
+
+gap: 25px;
+
+
+}
+
+/* ========================================
+LEVEL CARD
+======================================== */
+
+.level-card {
+position: relative;
+
+
+padding: 30px;
+
+background: rgba(255, 255, 255, 0.94);
+
+border: 1px solid #e5e2f1;
+
+border-radius: 24px;
+
+box-shadow:
+    0 15px 40px rgba(60, 50, 100, 0.08);
+
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+
+}
+
+.level-card:hover {
+transform: translateY(-6px);
+
+
+box-shadow:
+    0 20px 45px rgba(60, 50, 100, 0.14);
+
+
+}
+
+/* ========================================
+ICON LEVEL
+======================================== */
+
+.level-icon {
+width: 58px;
+
+
+height: 58px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+margin-bottom: 20px;
+
+border-radius: 17px;
+
+font-size: 30px;
+
+background: #f0ebff;
+
+
+}
+
+/* Warna icon berdasarkan level */
+
+.beginner .level-icon {
+background: #eaf8ef;
+}
+
+.intermediate .level-icon {
+background: #fff8df;
+}
+
+.advanced .level-icon {
+background: #fff0f2;
+}
+
+/* ========================================
+LABEL LEVEL
+======================================== */
+
+.label-level {
+display: block;
+
+
+margin-bottom: 8px;
+
+color: #8b7dc4;
+
+font-size: 11px;
+
+font-weight: 800;
+
+letter-spacing: 1.5px;
+
+
+}
+
+/* ========================================
+JUDUL LEVEL
+======================================== */
+
+.level-card h2 {
+margin-bottom: 10px;
+
+
+font-size: 25px;
+
+
+}
+
+.level-card p {
+min-height: 55px;
+
+
+margin-bottom: 25px;
+
+color: #77758b;
+
+font-size: 14px;
+
+line-height: 1.6;
+
+
+}
+
+/* ========================================
+TOMBOL LEVEL
+======================================== */
+
+.level-card button {
+width: 100%;
+
+
+min-height: 48px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+border: none;
+
+border-radius: 13px;
+
+color: white;
+
+background:
+    linear-gradient(
+        135deg,
+        #6747cf,
+        #4779e7
+    );
+
+font-size: 14px;
+
+font-weight: 700;
+
+cursor: pointer;
+
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+
+}
+
+.level-card button:hover {
+transform: translateY(-2px);
+
+
+box-shadow:
+    0 10px 25px rgba(91, 60, 196, 0.25);
+
+
+}
+
+.level-card button:active {
+transform: translateY(0);
+}
+
+/* ========================================
+STATUS QUIZ
+======================================== */
+
+.status-bar {
+display: grid;
+
+
+grid-template-columns:
+    repeat(4, 1fr);
+
+gap: 15px;
+
+margin-bottom: 20px;
+
+
+}
+
+.status-bar > div {
+min-height: 65px;
+
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding: 15px;
+
+background: white;
+
+border: 1px solid #e5e2f1;
+
+border-radius: 17px;
+
+box-shadow:
+    0 8px 25px rgba(60, 50, 100, 0.06);
+
+color: #6747cf;
+
+font-size: 14px;
+
+font-weight: 700;
+
+text-align: center;
+
+
+}
+
+.status-bar > div span {
+margin-left: 5px;
+}
+
+/* ========================================
+PROGRESS
+======================================== */
+
+.progress-container {
+width: 100%;
+
+
+height: 8px;
+
+margin-bottom: 25px;
+
+overflow: hidden;
+
+background: #e5e3ef;
+
+border-radius: 10px;
+
+
+}
+
+.progress-bar {
+width: 0%;
+
+
+height: 100%;
+
+background:
+    linear-gradient(
+        90deg,
+        #6747cf,
+        #4779e7
+    );
+
+border-radius: 10px;
+
+transition: width 0.3s ease;
+
+
+}
+
+/* ========================================
+PUZZLE CARD
+======================================== */
+
+.puzzle-card {
+max-width: 850px;
+
+
+margin: auto;
+
+padding: 40px;
+
+background: white;
+
+border: 1px solid #e5e2f1;
+
+border-radius: 25px;
+
+box-shadow:
+    0 20px 50px rgba(60, 50, 100, 0.09);
+
+
+}
+
+/* ========================================
+TINGKAT SOAL
+======================================== */
+
+.tingkat {
+display: inline-block;
+
+
+margin-bottom: 20px;
+
+padding: 7px 13px;
+
+color: #6747cf;
+
+background: #f0ebff;
+
+border-radius: 20px;
+
+font-size: 11px;
+
+font-weight: 800;
+
+letter-spacing: 1px;
+
+
+}
+
+/* ========================================
+PERTANYAAN
+======================================== */
+
+.puzzle-card h2 {
+margin-bottom: 12px;
+
+
+font-size: 26px;
+
+line-height: 1.5;
+
+
+}
+
+.petunjuk {
+margin-bottom: 25px;
+
+
+color: #888697;
+
+font-size: 14px;
+
+
+}
+
+/* ========================================
+PILIHAN
+======================================== */
+
+.pilihan {
+display: flex;
+
+
+flex-direction: column;
+
+gap: 12px;
+
+
+}
+
+/*
+Tombol pilihan dibuat oleh JavaScript.
+Karena class-nya belum tentu diketahui,
+kita target semua button di dalam .pilihan.
+*/
+
+.pilihan button {
+width: 100%;
+
+
+padding: 17px 20px;
+
+text-align: left;
+
+color: #38364d;
+
+background: #fafaff;
+
+border: 1px solid #e1dfec;
+
+border-radius: 14px;
+
+font-size: 15px;
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.pilihan button:hover:not(:disabled) {
+background: #f3efff;
+
+
+border-color: #7655dc;
+
+transform: translateX(4px);
+
+
+}
+
+.pilihan button:disabled {
+cursor: default;
+}
+
+/*
+Jika JavaScript memberi class
+.benar dan .salah
+*/
+
+.pilihan button.benar {
+color: #24754e;
+
+
+background: #e9f8ef;
+
+border-color: #49aa79;
+
+
+}
+
+.pilihan button.salah {
+color: #a63848;
+
+
+background: #fff0f2;
+
+border-color: #df6877;
+
+
+}
+
+/* ========================================
+PESAN
+======================================== */
+
+.pesan {
+min-height: 25px;
+
+
+margin-top: 20px;
+
+text-align: center;
+
+font-size: 14px;
+
+font-weight: 700;
+
+}
+
+/* ========================================
+TOMBOL BERIKUTNYA
+======================================== */
+
+.tombol-berikutnya {
+width: 100%;
+
+margin-top: 20px;
+
+padding: 15px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 8px;
+
+border: none;
+
+border-radius: 13px;
+
+color: white;
+
+background:
+    linear-gradient(
+        135deg,
+        #6747cf,
+        #4779e7
+    );
+
+font-size: 14px;
+
+font-weight: 700;
+
+cursor: pointer;
+
+transition: 0.2s ease;
+
+}
+
+.tombol-berikutnya:hover {
+transform: translateY(-2px);
+box-shadow:
+    0 10px 25px rgba(91, 60, 196, 0.25);
+
+
+}
+
+/* ========================================
+HASIL
+======================================== */
+
+.hasil-card {
+max-width: 650px;
+
+margin: 30px auto;
+
+padding: 45px;
+
+text-align: center;
+
+background: white;
+
+border: 1px solid #e5e2f1;
+
+border-radius: 28px;
+
+box-shadow:
+    0 20px 55px rgba(60, 50, 100, 0.1);
+
+
+}
+
+/* ========================================
+ICON HASIL
+======================================== */
+
+.hasil-icon {
+width: 75px;
+
+height: 75px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+margin: 0 auto 20px;
+
+border-radius: 22px;
+
+font-size: 38px;
+
+background:
+    linear-gradient(
+        135deg,
+        #7655dc,
+        #477ce8
+    );
+
+
+}
+
+/* ========================================
+JUDUL HASIL
+======================================== */
+
+.hasil-card h1 {
+margin-bottom: 10px;
+
+
+font-size: 34px;
+
+
+}
+
+.hasil-card > p {
+color: #858394;
+
+
+line-height: 1.6;
+
+
+}
+
+/* ========================================
+STATISTIK HASIL
+======================================== */
+
+.hasil-statistik {
+display: grid;
+
+
+grid-template-columns:
+    repeat(3, 1fr);
+
+gap: 15px;
+
+margin: 30px 0;
+
+
+}
+
+.hasil-statistik > div {
+padding: 20px 10px;
+
+
+background: #f8f7ff;
+
+border-radius: 17px;
+
+
+}
+
+.hasil-statistik span {
+display: block;
+
+
+margin-bottom: 7px;
+
+color: #6747cf;
+
+font-size: 26px;
+
+font-weight: 800;
+
+
+}
+
+.hasil-statistik small {
+color: #858394;
+
+
+font-size: 12px;
+
+
+}
+
+/* ========================================
+PESAN HASIL
+======================================== */
+
+.pesan-hasil {
+margin-bottom: 25px;
+
+
+color: #6747cf;
+
+font-size: 15px;
+
+font-weight: 700;
+
+
+}
+
+/* ========================================
+TOMBOL HASIL
+======================================== */
+
+.hasil-tombol {
+display: grid;
+
+
+grid-template-columns:
+    1fr 1fr;
+
+gap: 12px;
+
+
+}
+
+.hasil-tombol button {
+min-height: 48px;
+
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+gap: 8px;
+
+padding: 14px;
+
+border: none;
+
+border-radius: 13px;
+
+color: white;
+
+background:
+    linear-gradient(
+        135deg,
+        #6747cf,
+        #4779e7
+    );
+
+font-weight: 700;
+
+cursor: pointer;
+
+transition: 0.2s ease;
+
+
+}
+
+.hasil-tombol button:hover {
+transform: translateY(-2px);
+
+
+box-shadow:
+    0 10px 25px rgba(91, 60, 196, 0.25);
+
+
+}
+
+/* ========================================
+MATERIAL ICON
+======================================== */
+
+.material-symbols-outlined {
+vertical-align: middle;
+}
+
+/* ========================================
+RESPONSIVE TABLET
+======================================== */
+
+@media (max-width: 850px) {
+
+
+main {
+    padding: 45px 20px;
+}
+
+
+.level-container {
+    grid-template-columns: 1fr;
+}
+
+
+.status-bar {
+    grid-template-columns:
+        repeat(2, 1fr);
+}
+
+}
+
+/* ========================================
+RESPONSIVE HP
+======================================== */
+
+@media (max-width: 550px) {
+header {
+    padding: 17px 20px;
+}
+
+
+.logo {
+    font-size: 20px;
+}
+
+
+header > a {
+    font-size: 13px;
+}
+
+
+main {
+    padding: 40px 15px;
+}
+
+
+.judul {
+    margin-bottom: 35px;
+}
+
+
+.judul h1 {
+    font-size: 32px;
+}
+
+
+.judul p {
+    font-size: 14px;
+}
+
+
+.level-card {
+    padding: 25px;
+}
+
+
+.status-bar {
+    grid-template-columns: 1fr;
+}
+
+
+.puzzle-card {
+    padding: 25px 20px;
+}
+
+
+.puzzle-card h2 {
+    font-size: 21px;
+}
+
+
+.hasil-card {
+    padding: 30px 20px;
+}
+
+
+.hasil-card h1 {
+    font-size: 28px;
+}
+
+
+.hasil-statistik {
+    grid-template-columns: 1fr;
+}
+
+
+.hasil-tombol {
+    grid-template-columns: 1fr;
+}
+
+
+}

@@ -1,0 +1,726 @@
+/* =========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #172033;
+    min-height: 100vh;
+    background-color: #F4F7FF;
+    background-image:
+        radial-gradient(circle at 10% 10%, rgba(124, 92, 252, 0.08), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(142, 197, 252, 0.12), transparent 30%),
+        linear-gradient(135deg, #F4F7FF, #EEF2FF 55%, #F7F3FF);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #EEF2FF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #A5B4FC;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7C5CFC;
+}
+
+/* Accessibility Focus Ring */
+a:focus-visible {
+    outline: 3px solid rgba(91, 108, 255, 0.25);
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+
+/* =========================================================================
+   2. HEADER & NAVIGASI
+   ========================================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid #E2E8F0;
+    box-shadow: 0 4px 20px rgba(71, 85, 105, 0.06);
+}
+
+header h2 {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #5B6CFF, #7C5CFC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    position: relative;
+    color: #475569;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #5B6CFF, #7C5CFC);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #7C5CFC;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ======================
+   3. LAYOUT UTAMA (MAIN)
+===================== */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 20px 80px;
+}
+
+.bagian {
+    margin-bottom: 55px;
+}
+
+.judul-bagian {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+
+.judul-bagian h2 {
+    font-size: 25px;
+    color: #172033;
+}
+
+.judul-bagian a {
+    color: #7C5CFC;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.judul-bagian a:hover {
+    color: #8EC5FC;
+}
+/*  */
+/*/* HERO / KOTAK DASHBOARD UTAMA */
+.selamat-datang {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 40px;
+    border-radius: 24px;
+    
+    /* Background Gradient Berwarna & Soft Glassmorphism */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(238, 242, 255, 0.85));
+    border: 1px solid rgba(124, 92, 252, 0.2);
+    box-shadow: 
+        0 20px 50px rgba(91, 108, 255, 0.12),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+}
+
+/* Hiasan Efek Cahaya Warna di Background Kotak */
+.selamat-datang::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(124, 92, 252, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.teks-sambutan {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+}
+
+.teks-sambutan h1 {
+    font-size: 36px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: #172033;
+}
+
+.teks-sambutan p {
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* GRUP TOMBOL (Perbaikan Layout Tombol) */
+.grup-tombol-hero {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tombol-quiz {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #5B6CFF, #7C5CFC);
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(91, 108, 255, 0.25);
+    transition: all 0.3s ease;
+}
+
+.tombol-quiz:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(91, 108, 255, 0.35);
+}
+
+.tombol-sekunder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background: #FFFFFF;
+    border: 1.5px solid #CBD5E1;
+    color: #5B6CFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.tombol-sekunder:hover {
+    border-color: #7C5CFC;
+    background: #F8FAFF;
+    transform: translateY(-2px);
+}
+
+/* KOTAK SLIDER / VISUAL GAMBAR */
+.slider-dashboard {
+    position: relative;
+    z-index: 2;
+    width: 320px;
+    height: 220px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #6366F1, #8B5CF6);
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 15px 35px rgba(91, 108, 255, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Placeholder Ilustrasi jika Gambar Belum Ada */
+.visual-card-content {
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.visual-card-content .ikon-hero {
+    font-size: 48px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.visual-card-content p {
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+
+/* =========================================================================
+   6. SECTION KARTU LEVEL QUIZ
+   ========================================================================= */
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.kartu-belajar {
+    padding: 27px;
+    background-color: #FFFFFF;
+    border: 1px solid #D9E0EE;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(71, 85, 105, 0.07);
+    transition: 0.3s;
+}
+
+.kartu-belajar:hover {
+    transform: translateY(-4px);
+    border-color: #A5B4FC;
+    box-shadow: 0 15px 35px rgba(91, 108, 255, 0.13);
+}
+
+.atas-kartu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.nomor {
+    color: #7C5CFC;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: rgba(91, 108, 255, 0.09);
+    color: #8EC5FC;
+    font-size: 10px;
+}
+
+.kartu-belajar h3 {
+    margin-bottom: 10px;
+    color: #172033;
+    font-size: 18px;
+}
+
+.kartu-belajar > p {
+    min-height: 60px;
+    margin-bottom: 22px;
+    color: #64748B;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Progress Belajar Per Card */
+.progress-teks {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #64748B;
+    font-size: 11px;
+}
+
+.progress-belajar {
+    height: 6px;
+    margin-bottom: 22px;
+    background: #E5E7F2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #5B6CFF, #7C5CFC, #8EC5FC);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.tombol-belajar {
+    display: block;
+    padding: 11px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    color: #7C5CFC;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.tombol-belajar:hover {
+    background: #F4F7FF;
+    border-color: #6D5DF5;
+    color: #8EC5FC;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================================
+   7. SECTION QUIZ BANNER (CTA)
+   ========================================================================= */
+
+.quiz-banner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 35px 40px;
+    background:
+        radial-gradient(circle at 90% 50%, rgba(142, 197, 252, 0.20), transparent 25%),
+        linear-gradient(110deg, #EEF2FF, #F7F3FF);
+    border: 1px solid #C7D2FE;
+    border-radius: 16px;
+}
+
+.quiz-info {
+    position: relative;
+    z-index: 2;
+}
+
+.label-quiz {
+    color: #8EC5FC;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.quiz-info h2 {
+    margin: 10px 0;
+    font-size: 27px;
+    color: #172033;
+}
+
+.quiz-info p {
+    max-width: 550px;
+    margin-bottom: 20px;
+    color: #64748B;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.tombol-quiz {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #5B6CFF, #7C5CFC);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(91, 108, 255, 0.22);
+    transition: 0.3s;
+}
+
+.tombol-quiz:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(91, 108, 255, 0.30);
+}
+
+.angka-quiz {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #A5B4FC;
+    border-radius: 50%;
+    background: rgba(5, 8, 22, 0.5);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
+}
+
+.angka-quiz strong {
+    font-size: 55px;
+    color: #7C5CFC;
+}
+
+.angka-quiz span {
+    color: #64748B;
+    font-size: 11px;
+}
+
+
+/* =========================================================================
+   8. SECTION PROGRESS KESELURUHAN & MOTIVASI
+   ========================================================================= */
+
+.progress-card {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 30px;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #D9E0EE;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(71, 85, 105, 0.07);
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 18px;
+}
+
+.progress-info p {
+    margin-bottom: 7px;
+    color: #64748B;
+    font-size: 12px;
+}
+
+.progress-info h2 {
+    color: #172033;
+    font-size: 28px;
+}
+
+.progress-info > span {
+    color: #7C5CFC;
+    font-size: 12px;
+}
+
+.bar-besar {
+    width: 100%;
+    height: 10px;
+    background: #E5E7F2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bar-fill-total {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #5B6CFF, #7C5CFC, #8EC5FC);
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.motivasi {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    background: #F8FAFF;
+    box-shadow: 0 10px 30px rgba(71, 85, 105, 0.07);
+}
+
+.motivasi span {
+    color: #7C5CFC;
+    font-size: 25px;
+}
+
+.motivasi p {
+    color: #64748B;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================================
+   9. FOOTER
+   ========================================================================= */
+
+footer {
+    padding: 40px 8% 20px;
+    background-color: #EEF2FF;
+    border-top: 1px solid #E2E8F0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+}
+
+.logo-footer {
+    margin-bottom: 12px;
+    font-size: 23px;
+    background: linear-gradient(90deg, #5B6CFF, #7C5CFC);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-bagian h3 {
+    margin-bottom: 15px;
+    color: #7C5CFC;
+    font-size: 17px;
+}
+
+.footer-bagian p,
+.footer-bagian a {
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-bagian a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-bagian a:hover {
+    color: #5B6CFF;
+}
+
+/* Sosial Media Icon */
+.sosial {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.sosial a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    border: 1px solid #A5B4FC;
+    border-radius: 50%;
+    color: #7C5CFC;
+}
+
+.sosial a:hover {
+    color: #8EC5FC;
+    border-color: #8EC5FC;
+}
+
+/* Footer Bottom */
+.footer-bawah {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #E2E8F0;
+    color: #64748B;
+    font-size: 13px;
+}
+
+
+/* =========================================================================
+   10. MEDIA QUERIES (RESPONSIVE)
+   ========================================================================= */
+
+@media (max-width: 900px) {
+    .ringkasan {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .learning-grid,
+    .progress-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 40px 15px;
+    }
+
+    .selamat-datang,
+    .quiz-banner {
+        padding: 30px;
+        border-radius: 14px;
+    }
+
+    .selamat-datang {
+        min-height: 200px;
+    }
+
+    .teks-sambutan h1 {
+        font-size: 26px;
+    }
+
+    .hiasan-dashboard,
+    .angka-quiz {
+        display: none;
+    }
+
+    .ringkasan,
+    .footer-container {
+        grid-template-columns: 1fr;
+    
+    }
+    .ringkasan{
+        display: flex;
+        gap: 20px;
+
+    }
+    .kartu-statistik{
+        flex: 1;
+    }
+
+    .judul-bagian {
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .kartu-statistik,
+    .kartu-belajar {
+        padding: 20px;
+    }
+
+    .footer-bawah {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
